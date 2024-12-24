@@ -1,22 +1,21 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import HomePage from "./pages/HomePage"
-import MainLayout from "./layouts/MainLayout"
+import HomePage from "./pages/HomePage";
+import MainLayout from "./layouts/MainLayout";
 
-function App() {
+const App = () => {
+  // Define the routes using createBrowserRouter
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        { index: true, element: <HomePage /> }, // Keep index route for HomePage
+      ],
+    },
+  ]);
 
-    // Define the routes using createBrowserRouter 
-    const router = createBrowserRouter([
-      {
-        path: '/',
-        element: <MainLayout />,
-        children: [
-          { index: true, element: <HomePage />}
-        ]
-      }
-    ])
+  return <RouterProvider router={router} />;
+};
 
-    return <RouterProvider router={router}/>
-}
-
-export default App
+export default App;

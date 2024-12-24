@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
+import flowbite from 'flowbite-react/tailwind';
+
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/flowbite/**/*.js'
   ],
   theme: {
     extend: {
@@ -10,9 +14,11 @@ export default {
         sans: ['Roboto', 'sans-serif']
       },
       gridTemplateColumns: {
-        '70/30': '70% 28%',
+        '70/30': '70% 30%',
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    flowbite.plugin()
+  ],
+};
