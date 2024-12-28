@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif']
+        sans: ['Helvetica Neue', 'Arial', 'sans-serif']
       },
       gridTemplateColumns: {
         '70/30': '70% 30%',
