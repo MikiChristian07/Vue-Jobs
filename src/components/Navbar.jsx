@@ -4,7 +4,7 @@ import logo from '../assets/images/vue_logo.png';
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 bg-gray-800 border-gray-50 dark:bg-white-900">
+    <nav className="sticky top-0 bg-gray-800 border-gray-50 dark:bg-white-900 z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo Section */}
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -31,14 +31,14 @@ const Navbar = () => {
         >
           <span className="sr-only">Open main menu</span>
           <svg
-            className="w-5 h-5"
+            className="w-5 h-5 text-green-500" // Apply the text-green-500 class
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 17 14"
           >
             <path
-              stroke="currentColor"
+              stroke="currentColor" // Use currentColor to inherit the text-green-500 class
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
