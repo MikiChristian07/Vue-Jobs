@@ -13,25 +13,28 @@ const FeaturedJobs = () => {
       title: 'DevOps Engineer',
       description: 'Manage and automate infrastructure.',
       link: '/jobs/devops',
-      image: 'https://via.placeholder.com/150?text=DevOps',
+      image: 'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       title: 'Blockchain Developer',
       description: 'Develop and maintain blockchain applications.',
       link: '/jobs/blockchain',
-      image: 'https://via.placeholder.com/150?text=Blockchain',
+      image: 'https://images.pexels.com/photos/14751274/pexels-photo-14751274.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       title: 'Cyber Security Specialist',
       description: 'Protect systems and networks from cyber threats.',
       link: '/jobs/cyber-security',
-      image: 'https://via.placeholder.com/150?text=Cyber+Security',
+      image: 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
   ];
 
   return (
     <div className="max-w-screen-xl mx-auto p-4">
       <h2 className="text-3xl font-bold text-center mt-10 mb-8 font-inter">Featured Jobs</h2>
+      <p className="text-center text-gray-700 mb-8">
+        Explore our featured job listings in various fields. Click on the job titles to learn more and apply.
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {jobs.map((job) => (
           <div
