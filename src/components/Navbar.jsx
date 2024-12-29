@@ -4,7 +4,7 @@ import logo from '../assets/images/vue_logo.png';
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 border-gray-50 dark:bg-white-900">
+    <nav className="sticky top-0 bg-gray-800 border-gray-50 dark:bg-white-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo Section */}
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
