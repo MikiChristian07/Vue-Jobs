@@ -14,18 +14,24 @@ const FeaturedJobs = () => {
       description: 'Manage and automate infrastructure.',
       link: '/jobs/devops',
       image: 'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=600',
+      salary: '$90,000 - $120,000',
+      location: 'San Francisco, CA'
     },
     {
       title: 'Blockchain Developer',
       description: 'Develop and maintain blockchain applications.',
       link: '/jobs/blockchain',
       image: 'https://images.pexels.com/photos/14751274/pexels-photo-14751274.jpeg?auto=compress&cs=tinysrgb&w=600',
+      salary: '$100,000 - $140,000',
+      location: 'New York, NY'
     },
     {
       title: 'Cyber Security Specialist',
       description: 'Protect systems and networks from cyber threats.',
       link: '/jobs/cyber-security',
       image: 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600',
+      salary: '$95,000 - $130,000',
+      location: 'Austin, TX'
     },
   ];
 
@@ -45,6 +51,8 @@ const FeaturedJobs = () => {
             <img src={job.image} alt={job.title} className="w-full h-40 object-cover rounded-t-lg mb-4" />
             <h3 className="text-xl font-semibold mb-4 font-inter">{job.title}</h3>
             <p className="text-gray-700 mb-4">{job.description}</p>
+            <p className="text-gray-700 mb-2"><strong>Salary:</strong> {job.salary}</p>
+            <p className="text-gray-700 mb-4"><strong>Location:</strong> {job.location}</p>
             <a
               href={job.link}
               className="text-green-500 hover:text-green-700 font-bold"
