@@ -9,7 +9,7 @@ const SiteStats = () => {
   ];
 
   return (
-    <div className="bg-white w-full p-4 my-10">
+    <div className="bg-white w-full p-4">
       <h2 className="text-3xl font-bold text-center mt-10 mb-4 font-inter">Company Stats</h2>
       <p className="text-center text-gray-700 mb-8">
         Here are some key statistics showcasing the activities and reach of our company.
