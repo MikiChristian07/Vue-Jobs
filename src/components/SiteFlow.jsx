@@ -8,7 +8,7 @@ const SiteFlow = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 w-full p-4 pt-0">
+    <div className="bg-gray-100 w-full p-4 pt-0 mt-0">
       <h2 className="text-3xl font-bold text-center mt-4 mb-4 font-inter">How It Works</h2>
       <p className="text-center text-gray-700 mb-8">
         Follow these simple steps to find and apply for your dream job.

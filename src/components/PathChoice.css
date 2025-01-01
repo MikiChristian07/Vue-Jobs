@@ -1,12 +1,28 @@
-.overlay {
-    opacity: 0;
-    transform: translate(100%, 100%);
-    transition: transform 1s, opacity 1s, border-radius 1s;
-    border-radius: 75%;
-  }
-  
-  .relative:hover .overlay {
-    opacity: 1;
-    transform: translate(0, 0);
-    border-radius: 0;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.group:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.group:hover .text-color-change {
+  color: white;
+}
+
+.group:hover .button-color-change {
+  background-color: white;
+  color: green;
+}
+
+.group.bg-green-600:hover .text-color-change {
+  color: black;
+}
+
+.group.bg-green-600:hover .button-color-change {
+  background-color: green;
+  color: white;
+}
