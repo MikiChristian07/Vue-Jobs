@@ -13,7 +13,21 @@
           "description": "Tech Solutions Inc. is a leading provider of cybersecurity solutions.",
           "contactEmail": "contact@techsolutions.com",
           "contactPhone": "555-555-5555"
-        }
+        },
+        "responsibilities": [
+          "Monitor network traffic for security incidents.",
+          "Identify and mitigate vulnerabilities.",
+          "Implement security measures to protect systems.",
+          "Conduct regular security audits.",
+          "Provide training to employees on security best practices."
+        ],
+        "requirements": [
+          "Bachelor's degree in Computer Science or related field.",
+          "3+ years of experience in cyber security.",
+          "Strong understanding of cyber threats and security measures.",
+          "Ability to respond quickly to security incidents.",
+          "Excellent communication and teamwork skills."
+        ]
       },
       {
         "id": "2",
@@ -28,7 +42,20 @@
           "description": "Innovatech is a software development company specializing in innovative solutions.",
           "contactEmail": "contact@innovatech.com",
           "contactPhone": "555-555-5555"
-        }
+        },
+        "responsibilities": [
+          "Design, code, test, and deploy software solutions.",
+          "Understand requirements and translate them into technical specifications.",
+          "Debug and optimize code for high performance and scalability.",
+          "Collaborate with other engineers to review code and provide feedback."
+        ],
+        "requirements": [
+          "Bachelor's degree in Computer Science or related field.",
+          "2+ years of experience in software development.",
+          "Strong problem-solving skills.",
+          "Experience with coding, testing, and deploying software solutions.",
+          "Excellent communication and teamwork skills."
+        ]
       },
       {
         "id": "3",
@@ -43,7 +70,20 @@
           "description": "Data Insights is a data analytics company providing insights to businesses.",
           "contactEmail": "contact@datainsights.com",
           "contactPhone": "555-555-5555"
-        }
+        },
+        "responsibilities": [
+          "Collect, analyze, and interpret large datasets.",
+          "Use statistical techniques and machine learning algorithms to uncover patterns and insights.",
+          "Develop predictive models and provide recommendations to improve business performance.",
+          "Collaborate with other data scientists and engineers to develop data-driven solutions."
+        ],
+        "requirements": [
+          "Bachelor's degree in Data Science, Statistics, or related field.",
+          "2+ years of experience in data analysis.",
+          "Strong analytical skills.",
+          "Experience with statistical techniques and machine learning algorithms.",
+          "Excellent communication and teamwork skills."
+        ]
       },
       {
         "id": "4",
@@ -58,7 +98,20 @@
           "description": "Productive Inc. is a company focused on product management and development.",
           "contactEmail": "contact@productive.com",
           "contactPhone": "555-555-5555"
-        }
+        },
+        "responsibilities": [
+          "Define product vision, strategy, and roadmap.",
+          "Work closely with cross-functional teams to ensure successful product launches.",
+          "Gather and analyze customer feedback to improve product features.",
+          "Collaborate with marketing and sales teams to develop go-to-market strategies and drive product adoption."
+        ],
+        "requirements": [
+          "Bachelor's degree in Business, Marketing, or related field.",
+          "3+ years of experience in product management.",
+          "Strong leadership skills.",
+          "Experience with defining product vision, strategy, and roadmap.",
+          "Excellent communication and teamwork skills."
+        ]
       },
       {
         "id": "5",
@@ -73,7 +126,21 @@
           "description": "DesignHub is a design agency specializing in user experience design.",
           "contactEmail": "contact@designhub.com",
           "contactPhone": "555-555-5555"
-        }
+        },
+        "responsibilities": [
+          "Create intuitive and visually appealing user interfaces.",
+          "Work closely with product managers and developers to understand user needs and translate them into design solutions.",
+          "Create wireframes, prototypes, and high-fidelity mockups.",
+          "Conduct user research and usability testing to gather feedback and iterate on designs.",
+          "Collaborate with other designers to maintain a consistent design language across products."
+        ],
+        "requirements": [
+          "Bachelor's degree in Design, HCI, or related field.",
+          "2+ years of experience in UX design.",
+          "Strong design skills.",
+          "Experience with creating wireframes, prototypes, and high-fidelity mockups.",
+          "Excellent communication and teamwork skills."
+        ]
       }
     ]
   }
