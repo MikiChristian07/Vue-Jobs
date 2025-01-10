@@ -1,37 +1,139 @@
-import { useParams } from 'react-router-dom';
+/* eslint-disable react/prop-types */
+import { useLoaderData,  useNavigate} from 'react-router-dom';
+import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-const JobPage = () => {
-  const { id } = useParams();
-  const job = {
-    id: 1,
-    title: 'Cyber Security Specialist',
-    description: 'Protect systems and networks from cyber threats.',
-    image: 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600',
-    salary: '$95,000 - $130,000',
-    location: 'Austin, TX',
-    responsibilities: 'Monitor network traffic, identify vulnerabilities, and implement security measures.',
-    requirements: 'Bachelor\'s degree in Computer Science or related field, 3+ years of experience in cyber security.',
-    company: 'Tech Solutions Inc.',
-    postedDate: '2023-10-01',
-  };
+const JobPage = ({ deleteJob }) => {
+    const navigate = useNavigate();
+    // const { id } = useParams();
+    const job = useLoaderData();
 
-  return (
-    <div className="max-w-screen-lg mx-auto p-4 bg-white rounded-lg shadow-md">
-      <img src={job.image} alt={job.title} className="w-full h-64 object-cover rounded-t-lg mb-4" />
-      <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
-      <p className="text-gray-700 mb-4"><strong>Company:</strong> {job.company}</p>
-      <p className="text-gray-700 mb-4"><strong>Location:</strong> {job.location}</p>
-      <p className="text-gray-700 mb-4"><strong>Salary:</strong> {job.salary}</p>
-      <p className="text-gray-700 mb-4"><strong>Posted Date:</strong> {job.postedDate}</p>
-      <h2 className="text-2xl font-semibold mb-2">Job Description</h2>
-      <p className="text-gray-700 mb-4">{job.description}</p>
-      <h2 className="text-2xl font-semibold mb-2">Responsibilities</h2>
-      <p className="text-gray-700 mb-4">{job.responsibilities}</p>
-      <h2 className="text-2xl font-semibold mb-2">Requirements</h2>
-      <p className="text-gray-700 mb-4">{job.requirements}</p>
-      <button className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300 ease-in-out transform hover:scale-105">Apply Now</button>
-    </div>
-  );
-}
+    // Render a fallback UI if `job` is null or undefined
+    if (!job) {
+        return <p>Job not found or failed to load.</p>;
+    }
 
-export default JobPage;
+    const onDeleteClick = (jobId) => {
+        const confirm = window.confirm('Are you sure you want to delete')
+
+        if (!confirm) return;
+
+        deleteJob(jobId);
+
+        toast.success('Job deleted successfully')
+
+        navigate('/jobs');
+    }
+
+    return (
+        <>
+            <section>
+                <div className="container m-auto py-6 px-6">
+                    <Link
+                        to="/jobs"
+                        className="text-red-500 hover:text-red-600 flex items-center"
+                    >
+                    <FaArrowLeft className="mr-2" /> Back to Job Listings
+                    </Link>
+                </div>
+            </section>
+
+            <section className="bg-red-50">
+            <div className="container m-auto py-10 px-6">
+                <div className="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
+                <main>
+                    <div
+                    className="bg-white p-6 rounded-lg shadow-md text-center md:text-left"
+                    >
+                    <div className="text-gray-500 mb-4">{job.type}</div>
+                    <h1 className="text-3xl font-bold mb-4">
+                        {job.title}
+                    </h1>
+                    <div
+                        className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start"
+                    >
+                        <FaMapMarker className="text-orange-700 mr-1" /> 
+                        <p className="text-orange-700">{job.location}</p>
+                    </div>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+                    <h3 className="text-red-800 text-lg font-bold mb-6">
+                        Job Description
+                    </h3>
+
+                    <p className="mb-4">
+                        {job.description}
+                    </p>
+
+                    <h3 className="text-red-800 text-lg font-bold mb-2">Salary</h3>
+
+                    <p className="mb-4">{job.salary}</p>
+                    </div>
+                </main>
+
+
+                <aside>
+
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-xl font-bold mb-6">Company Info</h3>
+
+                    <h2 className="text-2xl">{job.company.name}</h2>
+
+                    <p className="my-2">
+                        {job.company.description}
+                    </p>
+
+                    <hr className="my-4" />
+
+                    <h3 className="text-xl">Contact Email:</h3>
+
+                    <p className="my-2 bg-red-100 p-2 font-bold">
+                    {job.company.contactEmail}
+                    </p>
+
+                    <h3 className="text-xl">Contact Phone:</h3>
+
+                    <p className="my-2 bg-red-100 p-2 font-bold">{job.company.contactPhone}</p>
+                    </div>
+
+
+                    <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+                    <h3 className="text-xl font-bold mb-6">Manage Job</h3>
+                    <Link
+                        to={`/edit-job/${job.id}`}
+                        className="bg-red-500 hover:bg-red-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                        >Edit Job
+                    </Link>
+                    <button onClick={ () => onDeleteClick(job.id) }
+                        className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                    >
+                        Delete Job
+                    </button>
+                    </div>
+                </aside>
+                </div>
+            </div>
+            </section>
+        </>
+    );
+};
+
+const jobLoader = async ({ params }) => {
+    try {
+        const res = await fetch(`/api/jobs/${params.id}`);
+        if (!res.ok) {
+            throw new Error(`Failed to fetch job with ID: ${params.id}`);
+        }
+        const data = await res.json();
+        return data;
+    } catch (error) {
+        console.error("Error loading job:", error);
+        // Throw the error to let React Router handle it with an error boundary
+        throw new Response("Failed to load job data.", { status: 500 });
+    }
+};
+
+// eslint-disable-next-line react-refresh/only-export-components
+export { JobPage as default, jobLoader };

@@ -1,0 +1,79 @@
+{
+    "jobs": [
+      {
+        "id": "1",
+        "title": "Cyber Security Specialist",
+        "type": "Full-Time",
+        "location": "Austin, TX",
+        "description": "Protect systems and networks from cyber threats. As a Cyber Security Specialist, you will be responsible for monitoring network traffic, identifying vulnerabilities, and implementing security measures to protect our systems. You will work closely with the IT team to ensure the security of our infrastructure and data. This role requires a deep understanding of cyber threats and the ability to respond quickly to security incidents. You will also be responsible for conducting regular security audits and providing training to employees on security best practices.",
+        "salary": "$95,000 - $130,000",
+        "image": "https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "company": {
+          "name": "Tech Solutions Inc.",
+          "description": "Tech Solutions Inc. is a leading provider of cybersecurity solutions.",
+          "contactEmail": "contact@techsolutions.com",
+          "contactPhone": "555-555-5555"
+        }
+      },
+      {
+        "id": "2",
+        "title": "Software Engineer",
+        "type": "Full-Time",
+        "location": "San Francisco, CA",
+        "description": "Develop and maintain software applications. As a Software Engineer, you will be responsible for designing, coding, testing, and deploying software solutions. You will work closely with the product team to understand requirements and translate them into technical specifications. This role requires strong problem-solving skills and the ability to work in a fast-paced environment. You will also be responsible for debugging and optimizing code to ensure high performance and scalability. Additionally, you will collaborate with other engineers to review code and provide feedback.",
+        "salary": "$85,000 - $120,000",
+        "image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "company": {
+          "name": "Innovatech",
+          "description": "Innovatech is a software development company specializing in innovative solutions.",
+          "contactEmail": "contact@innovatech.com",
+          "contactPhone": "555-555-5555"
+        }
+      },
+      {
+        "id": "3",
+        "title": "Data Scientist",
+        "type": "Full-Time",
+        "location": "New York, NY",
+        "description": "Analyze and interpret complex data to help companies make decisions. As a Data Scientist, you will be responsible for collecting, analyzing, and interpreting large datasets. You will use statistical techniques and machine learning algorithms to uncover patterns and insights. This role requires strong analytical skills and the ability to communicate findings to non-technical stakeholders. You will also be responsible for developing predictive models and providing recommendations to improve business performance. Additionally, you will collaborate with other data scientists and engineers to develop data-driven solutions.",
+        "salary": "$100,000 - $140,000",
+        "image": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "company": {
+          "name": "Data Insights",
+          "description": "Data Insights is a data analytics company providing insights to businesses.",
+          "contactEmail": "contact@datainsights.com",
+          "contactPhone": "555-555-5555"
+        }
+      },
+      {
+        "id": "4",
+        "title": "Product Manager",
+        "type": "Full-Time",
+        "location": "Seattle, WA",
+        "description": "Oversee the development and delivery of products. As a Product Manager, you will be responsible for defining product vision, strategy, and roadmap. You will work closely with cross-functional teams to ensure successful product launches. This role requires strong leadership skills and the ability to prioritize tasks effectively. You will also be responsible for gathering and analyzing customer feedback to improve product features. Additionally, you will collaborate with marketing and sales teams to develop go-to-market strategies and drive product adoption.",
+        "salary": "$110,000 - $150,000",
+        "image": "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "company": {
+          "name": "Productive Inc.",
+          "description": "Productive Inc. is a company focused on product management and development.",
+          "contactEmail": "contact@productive.com",
+          "contactPhone": "555-555-5555"
+        }
+      },
+      {
+        "id": "5",
+        "title": "UX Designer",
+        "type": "Full-Time",
+        "location": "Chicago, IL",
+        "description": "Design user-friendly interfaces for applications. As a UX Designer, you will be responsible for creating intuitive and visually appealing user interfaces. You will work closely with product managers and developers to understand user needs and translate them into design solutions. This role requires strong design skills and the ability to create wireframes, prototypes, and high-fidelity mockups. You will also be responsible for conducting user research and usability testing to gather feedback and iterate on designs. Additionally, you will collaborate with other designers to maintain a consistent design language across products.",
+        "salary": "$75,000 - $105,000",
+        "image": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "company": {
+          "name": "DesignHub",
+          "description": "DesignHub is a design agency specializing in user experience design.",
+          "contactEmail": "contact@designhub.com",
+          "contactPhone": "555-555-5555"
+        }
+      }
+    ]
+  }

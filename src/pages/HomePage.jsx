@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      <FeaturedJobs />
+      <FeaturedJobs isHome={true} />
       <SiteStats />
       <SiteFlow />
       <PathChoice />
