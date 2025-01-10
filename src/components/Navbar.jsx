@@ -58,7 +58,7 @@ const Navbar = () => {
               md:bg-transparent dark:bg-gray-700 
               md:dark:bg-gray-900 dark:border-gray-700"
           >
-            {["Home", "About", "Services", "Pricing", "Contact"].map((item) => (
+            {["Home", "Jobs", "Employer", "Pricing", "Contact"].map((item) => (
               <li key={item}>
                 <Link
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
