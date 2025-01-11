@@ -1,3 +1,4 @@
+import { Link} from 'react-router-dom';
 import './PathChoice.css'; // Import custom CSS for animations
 
 const PathChoice = () => {
@@ -14,7 +15,14 @@ const PathChoice = () => {
           <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Employer" className="relative mx-auto mb-4 w-24 h-24 object-cover rounded-full" />
           <h2 className="relative text-2xl font-bold mb-4 text-color-change">Employer</h2>
           <p className="relative mb-4 text-color-change">Post jobs and find the best candidates.</p>
-          <button className="relative bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-colors button-color-change">Employer</button>
+          <Link 
+            to="/add-job"
+            className="
+              relative bg-green-600 text-white 
+              py-2 px-4 rounded hover:bg-green-700 
+              transition-colors button-color-change">
+                Employer
+          </Link>
         </div>
         <div className="relative bg-green-600 text-white rounded-lg p-6 w-full md:w-4/12 text-center transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl overflow-hidden group">
           <div className="overlay absolute inset-0 bg-white opacity-0 transform translate-y-full transition-all duration-500"></div>
