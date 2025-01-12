@@ -5,6 +5,8 @@ import JobPage, { jobLoader } from "./pages/JobPage";
 import JobsPage from "./pages/JobsPage";
 import AddJobPage from "./pages/AddJobPage";
 import MainLayout from "./layouts/MainLayout";
+import Pricing from "./pages/Pricing";
+import ContactPage from "./pages/ContactPage";
 
 
 const App = () => {
@@ -64,7 +66,7 @@ const App = () => {
       path: "/",
       element: <MainLayout />,
       children: [
-        { index: true, element: <HomePage /> },
+        { index: true, element: <HomePage /> }, // Keep index route for HomePage
         { path: 'jobs', element: <JobsPage /> },
         {
           path: 'employer',
@@ -74,7 +76,15 @@ const App = () => {
           path: 'jobs/:id',
           element: <JobPage deleteJob={ deleteJob }/>,
           loader: jobLoader, // Attach the loader here
-        }, // Keep index route for HomePage
+        },
+        {
+          path: 'pricing',
+          element: <Pricing />,
+        },
+        {
+          path: 'contact',
+          element: <ContactPage />,
+        } 
       ],
     },
   ]);
