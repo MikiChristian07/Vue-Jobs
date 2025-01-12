@@ -16,7 +16,7 @@ const PathChoice = () => {
           <h2 className="relative text-2xl font-bold mb-4 text-color-change">Employer</h2>
           <p className="relative mb-4 text-color-change">Post jobs and find the best candidates.</p>
           <Link 
-            to="/add-job"
+            to="/employer"
             className="
               relative bg-green-600 text-white 
               py-2 px-4 rounded hover:bg-green-700 
@@ -29,7 +29,14 @@ const PathChoice = () => {
           <img src="https://images.pexels.com/photos/3769990/pexels-photo-3769990.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Job Seeker" className="relative mx-auto mb-4 w-24 h-24 object-cover rounded-full border-2 border-white" />
           <h2 className="relative text-2xl font-bold mb-4 text-color-change">Job Seeker</h2>
           <p className="relative mb-4 text-color-change">Find your dream job and apply now.</p>
-          <button className="relative bg-white text-green-600 py-2 px-4 rounded hover:bg-gray-200 transition-colors button-color-change">Job Seeker</button>
+          <Link 
+            to="/jobs"
+            className="
+              relative bg-white text-green-600 
+              py-2 px-4 rounded hover:bg-gray-200 
+              transition-colors button-color-change">
+                Job Seeker
+          </Link>
         </div>
       </div>
     </div>

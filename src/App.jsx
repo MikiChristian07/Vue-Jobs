@@ -67,7 +67,7 @@ const App = () => {
         { index: true, element: <HomePage /> },
         { path: 'jobs', element: <JobsPage /> },
         {
-          path: 'add-job',
+          path: 'employer',
           element: <AddJobPage addJobSubmit={ addJob } />,
         },
         {
