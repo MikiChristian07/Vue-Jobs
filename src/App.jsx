@@ -12,7 +12,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 const App = () => {
   const addJob = async (newJob) => {
-    const res = await fetch(`${apiUrl}/jobs`, {
+    const res = await fetch(`${apiUrl}jobs`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const App = () => {
   };
 
   const deleteJob = async (id) => {
-    const res = await fetch(`${apiUrl}/jobs/${id}`, {
+    const res = await fetch(`${apiUrl}jobs/${id}`, {
       method: 'DELETE',
     });
 

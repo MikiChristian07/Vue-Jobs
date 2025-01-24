@@ -21,7 +21,7 @@ const FeaturedJobs = ({ isHome = false }) => {
   // Fetch jobs data from the API
   useEffect(() => {
     const fetchJobs = async () => {
-      const endpoint = isHome ? `${apiUrl}/jobs?_limit=3` : `${apiUrl}/jobs`;
+      const endpoint = isHome ? `${apiUrl}jobs?_limit=3` : `${apiUrl}jobs`;
       try {
         const res = await fetch(endpoint);
         const data = await res.json();
