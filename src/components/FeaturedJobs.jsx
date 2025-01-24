@@ -8,6 +8,8 @@ const FeaturedJobs = ({ isHome = false }) => {
   const [loading, setLoading] = useState(true); // Loading state
   const [delayed, setDelayed] = useState(false); // Delay before showing spinner
 
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   // Simulate a delay before showing the spinner (e.g., 2 seconds)
   useEffect(() => {
     const delayTimer = setTimeout(() => {
@@ -19,9 +21,9 @@ const FeaturedJobs = ({ isHome = false }) => {
   // Fetch jobs data from the API
   useEffect(() => {
     const fetchJobs = async () => {
-      const apiUrl = isHome ? '/api/jobs?_limit=3' : '/api/jobs';
+      const endpoint = isHome ? `${apiUrl}/jobs?_limit=3` : `${apiUrl}/jobs`;
       try {
-        const res = await fetch(apiUrl);
+        const res = await fetch(endpoint);
         const data = await res.json();
         setJobs(data);
       } catch (error) {
@@ -32,7 +34,7 @@ const FeaturedJobs = ({ isHome = false }) => {
     };
 
     fetchJobs();
-  }, [isHome]);
+  }, [isHome, apiUrl]);
 
   return (
     <section className="bg-blue-50 px-4 py-10">

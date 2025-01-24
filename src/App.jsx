@@ -8,12 +8,12 @@ import MainLayout from "./layouts/MainLayout";
 import Pricing from "./pages/Pricing";
 import ContactPage from "./pages/ContactPage";
 
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const App = () => {
-   // Fixing the typo in the `addJob` function to add a new job
-   const addJob = async (newJob) => {
-    const res = await fetch('/api/jobs', {
-      method: 'POST', // Corrected from 'methods' to 'method'
+  const addJob = async (newJob) => {
+    const res = await fetch(`${apiUrl}/jobs`, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -25,13 +25,12 @@ const App = () => {
       return;
     }
 
-    return await res.json(); // Return the result if needed
+    return await res.json();
   };
 
-  // Function to delete a job 
   const deleteJob = async (id) => {
-    const res = await fetch(`/api/jobs/${id}`, {
-      method: 'DELETE', // Corrected from 'methods' to 'method'
+    const res = await fetch(`${apiUrl}/jobs/${id}`, {
+      method: 'DELETE',
     });
 
     if (!res.ok) {
@@ -39,34 +38,15 @@ const App = () => {
       return;
     }
 
-    return await res.json(); // Return the result if needed
-  }
-  
-  // function to update the job
-  // const updateJob = async (job) => {
-  //   const res = await fetch(`/api/jobs/${job.id}`, {
-  //     method: 'PUT', // Corrected from 'methods' to 'method'
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(job),
-  //   });
+    return await res.json();
+  };
 
-  //   if (!res.ok) {
-  //     console.error('Failed to add the job:', res.statusText);
-  //     return;
-  //   }
-
-  //   return await res.json(); // Return the result if needed
-  // }
-
-  // Define the routes using createBrowserRouter
   const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout />,
       children: [
-        { index: true, element: <HomePage /> }, // Keep index route for HomePage
+        { index: true, element: <HomePage /> },
         { path: 'jobs', element: <JobsPage /> },
         {
           path: 'employer',
@@ -74,8 +54,8 @@ const App = () => {
         },
         {
           path: 'jobs/:id',
-          element: <JobPage deleteJob={ deleteJob }/>,
-          loader: jobLoader, // Attach the loader here
+          element: <JobPage deleteJob={ deleteJob } />,
+          loader: jobLoader,
         },
         {
           path: 'pricing',
@@ -84,7 +64,7 @@ const App = () => {
         {
           path: 'contact',
           element: <ContactPage />,
-        } 
+        }
       ],
     },
   ]);
