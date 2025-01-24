@@ -25,7 +25,11 @@ const FeaturedJobs = ({ isHome = false }) => {
       try {
         const res = await fetch(endpoint);
         const data = await res.json();
-        setJobs(data);
+        if (Array.isArray(data)) {
+          setJobs(data);
+        } else {
+          console.error('Expected an array but got:', data);
+        }
       } catch (error) {
         console.error('Error fetching jobs:', error);
       } finally {
