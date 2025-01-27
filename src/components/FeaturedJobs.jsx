@@ -6,17 +6,17 @@ import Spinner from './Spinner';
 const FeaturedJobs = ({ isHome = false }) => {
   const [jobs, setJobs] = useState([]); // Jobs data state
   const [loading, setLoading] = useState(true); // Loading state
-  const [delayed, setDelayed] = useState(false); // Delay before showing spinner
+  // const [delayed, setDelayed] = useState(false); // Delay before showing spinner
 
   const apiUrl = import.meta.env.VITE_API_URL;
 
   // Simulate a delay before showing the spinner (e.g., 2 seconds)
-  useEffect(() => {
-    const delayTimer = setTimeout(() => {
-      setDelayed(true); // Show spinner after 2 seconds
-    }, 2000);
-    return () => clearTimeout(delayTimer); // Cleanup the timeout on unmount
-  }, []);
+  // useEffect(() => {
+  //   const delayTimer = setTimeout(() => {
+  //     setDelayed(true); // Show spinner after 2 seconds
+  //   }, 2000);
+  //   return () => clearTimeout(delayTimer); // Cleanup the timeout on unmount
+  // }, []);
 
   // Fetch jobs data from the API
   useEffect(() => {
@@ -49,7 +49,7 @@ const FeaturedJobs = ({ isHome = false }) => {
         </p>
 
         {/* Show Spinner with a delay if loading is true and delayed state is set */}
-        {loading && delayed ? (
+        {loading ? (
           <Spinner loading={loading} />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
